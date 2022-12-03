@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/midrail.png", "mips smooth")
 ATT.Description = [[A medium length rail for installation on the KeySlot interface on the AXMC sniper rifle, manufactured by Accuracy International.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/axmc_mount_mid.mdl"
 -- ATT.ModelAngleOffset = Angle(90, 0, 0)

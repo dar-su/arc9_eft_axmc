@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/hg.png", "mips smooth")
 ATT.Description = [[The AX 16 inch handguard for the AXMC sniper rifle manufactured by Accuracy International equipped with a patented KeySlot interface for the installation of additional devices and accessories.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_axmc_hgg"}
 

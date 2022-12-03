@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/rec.png", "mips smooth")
 ATT.Description = [[The factory fitted .338 Lapua Magnum chassis for the AXMC sniper rifle, manufactured by Accuracy International.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_axmc_rec"}
 

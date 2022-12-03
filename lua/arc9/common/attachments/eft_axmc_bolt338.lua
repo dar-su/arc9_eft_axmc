@@ -4,6 +4,6 @@ ATT.Icon = Material("entities/eft_axmc_attachments/bolt.png", "mips smooth")
 ATT.Description = [[A .338 Lapua Magnum bolt assembly for the Accuracy International AXMC sniper rifle.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_axmc_bolt"}

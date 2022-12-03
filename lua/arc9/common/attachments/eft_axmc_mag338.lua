@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/338mag.png", "mips smooth")
 ATT.Description = [[A 10-round AXMC sniper rifle magazine by Accuracy International, for .338 Lapua Magnum cartridges.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_axmc_mag_338"}
 

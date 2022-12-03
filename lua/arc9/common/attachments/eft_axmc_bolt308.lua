@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/bolt.png", "mips smooth")
 ATT.Description = [[A 7.62x51 (.308) bolt assembly for the Accuracy International AXMC sniper rifle.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.MuzzleParticle = "muzzleflash_g3"
 ATT.ShellModel = "models/shells/shell_762nato.mdl"
 

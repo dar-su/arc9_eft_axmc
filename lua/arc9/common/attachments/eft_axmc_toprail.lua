@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/toprail.png", "mips smooth")
 ATT.Description = [[A top handguard rail for installation on the KeySlot interface for the AXMC sniper rifle, manufactured by Accuracy International.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_axmc_hg_toprail"}
 

@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_axmc_attachments/gripar.png", "mips smooth")
 ATT.Description = [[An adapter that allows AR-type pistol grips installation on the AXMC sniper rifle.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_axmc_pg"}
 
