@@ -3,6 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
+SWEP.SubCategory = "Sniper/Marksman Rifles"
 SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
 
 SWEP.PrintName = "AI AXMC"
@@ -337,7 +338,7 @@ end
 -- end
 
 
-local randspin = {"eft_shared/weapon_generic_rifle_spin1.wav","eft_shared/weapon_generic_rifle_spin2.wav","eft_shared/weapon_generic_rifle_spin3.wav","eft_shared/weapon_generic_rifle_spin4.wav","eft_shared/weapon_generic_rifle_spin5.wav","eft_shared/weapon_generic_rifle_spin6.wav","eft_shared/weapon_generic_rifle_spin7.wav","eft_shared/weapon_generic_rifle_spin8.wav","eft_shared/weapon_generic_rifle_spin9.wav","eft_shared/weapon_generic_rifle_spin10.wav"}
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
 
 local rst_magcheck = {
     { s = randspin, t = 0.2 },
@@ -366,14 +367,14 @@ SWEP.Animations = {
     ["ready"] = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
-            { s = "eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
             { s = path .. "aiax_bolt_out.wav", t = 0.72 },
             { s = path .. "aiax_bolt_in.wav", t = 1.21 },
         },
     },
 
-    ["draw"] = { Source = "draw", EventTable = { { s = "eft_shared/weap_in.wav", t = 0 } } },
-    ["holster"] = { Source = "holster", EventTable = { { s = "eft_shared/weap_out.wav", t = 0 } } },
+    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 } } },
+    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 } } },
 
 
     ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "aiax_hammer_release.wav", t = 0 } } },
@@ -397,7 +398,7 @@ SWEP.Animations = {
         EventTable = {
             { s = randspin, t = 0.17 },   
             { s = path .. "aiax_magout.wav", t = 0.55 },
-            { s = "eft_shared/weap_magin_sbrosnik.wav", t = 1.21 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 1.21 },
             { s = path .. "aiax_magin_rattle.wav", t = 2.12 },
             { s = path .. "aiax_magin.wav", t = 2.38 },
             { s = randspin, t = 2.79 },   
@@ -413,7 +414,7 @@ SWEP.Animations = {
             { s = path .. "aiax_bolt_out.wav", t = 0.26 },
             { s = randspin, t = 0.69 },   
             { s = path .. "aiax_magout_fast.wav", t = 1.39 },
-            { s = "eft_shared/weap_magin_sbrosnik.wav", t = 2.08 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 2.08 },
             { s = path .. "aiax_magin_rattle.wav", t = 2.62 },
             { s = path .. "aiax_magin.wav", t = 2.88 },
             { s = randspin, t = 3.28 },   
@@ -521,10 +522,10 @@ SWEP.Animations = {
         EventTable = rst_chamber
     },
 
-    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
 
 
     ["jam1"] = {
