@@ -254,9 +254,9 @@ SWEP.DistantShootSound = path .. "aiax_outdoor_distant.wav"
 SWEP.DistantShootSoundIndoor = path .. "aiax_indoor_distant.wav"
 
 SWEP.ShootSoundSilenced = path .. "aiax_outdoor_silenced_close.wav"
-SWEP.ShootSoundIndoorSilenced = path .. "aiax_indoor_silenced_close.wav"
+SWEP.ShootSoundSilencedIndoor = path .. "aiax_indoor_silenced_close.wav"
 SWEP.DistantShootSoundSilenced = path .. "aiax_outdoor_silenced_distant.wav"
-SWEP.DistantShootSoundIndoorSilenced = path .. "aiax_indoor_silenced_distant.wav"
+SWEP.DistantShootSoundSilencedIndoor = path .. "aiax_indoor_silenced_distant.wav"
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables

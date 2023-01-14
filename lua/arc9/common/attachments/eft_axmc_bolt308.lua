@@ -16,8 +16,8 @@ ATT.DistantShootSound = path .. "rem700_outdoor_distant1.wav"
 ATT.DistantShootSoundIndoor = path .. "rem700_indoor_distant1.wav"
 
 ATT.ShootSoundSilenced = path .. "rem700_outdoor_silenced_close.wav"
-ATT.ShootSoundIndoorSilenced = path .. "rem700_indoor_silenced_close1.wav" -- not work plz fix
+ATT.ShootSoundSilencedIndoor = path .. "rem700_indoor_silenced_close1.wav" -- not work plz fix
 ATT.DistantShootSoundSilenced = path .. "rem700_outdoor_silenced_distant.wav"
-ATT.DistantShootSoundIndoorSilenced = path .. "rem700_indoor_silenced_distant1.wav"
+ATT.DistantShootSoundSilencedIndoor = path .. "rem700_indoor_silenced_distant1.wav"
 
 ATT.Category = {"eft_axmc_bolt"}
