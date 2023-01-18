@@ -41,7 +41,7 @@ SWEP.PhysBulletMuzzleVelocity = 21000
 --          Spread
 SWEP.SpreadMultHipFire = 5
 SWEP.Spread = 0.0001
-SWEP.SpreadAddRecoil = 0.005
+-- SWEP.SpreadAddRecoil = 0.005
 
 
 --          Recoil
@@ -81,8 +81,8 @@ SWEP.VisualRecoilPunch = 15 -- How far back visual recoil moves the gun
 SWEP.VisualRecoilPunchMultSights = 1
 SWEP.VisualRecoilPositionBump = 2
 
-SWEP.VisualRecoilDampingConst = 12
-SWEP.VisualRecoilSpringMagnitude = .1
+SWEP.VisualRecoilDampingConst = 122
+SWEP.VisualRecoilSpringMagnitude = 5.1
 
 SWEP.RecoilKick = 0.05
 SWEP.RecoilKickDamping = 10
@@ -161,7 +161,7 @@ SWEP.TracerColor = Color(255, 225, 200)
 --          Positions and offsets
 
 SWEP.IronSights = {
-    Pos = Vector(-4.28, -5, 1.4 ),
+    Pos = Vector(-4.28, -5, 1.29 ),
     Ang = Angle(0, 0.06, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.1,
@@ -265,7 +265,18 @@ SWEP.DryFireSound = "" -- we will have own in sound tables
 
 ------------------------- [[[           Hooks & functions            ]]] -------------------------
 
+-- Anti integrated zeroing
+local sposoffset, sangoffset = Vector(0, 0, -0.05), Angle(0, 0.5, 0)
 
+function SWEP:GetSightPositions()
+    local s = self:GetSight()
+
+    if self:GetValue("FoldSights") then
+        return s.Pos, s.Ang
+    else
+        return s.Pos + sposoffset, s.Ang + sangoffset
+    end
+end
 
 ------------------------- [[[           Animations            ]]] -------------------------
 
