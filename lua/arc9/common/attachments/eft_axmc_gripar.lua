@@ -6,6 +6,9 @@ ATT.Description = [[An adapter that allows AR-type pistol grips installation on 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
 ATT.Category = {"eft_axmc_pg"}
 
 ATT.Attachments = {

@@ -3,6 +3,13 @@ ATT.CompactName = "AXMC upper"
 ATT.Icon = Material("entities/eft_axmc_attachments/top.png", "mips smooth")
 ATT.Description = [[An upper receiver for the AXMC sniper rifle manufactured by Accuracy International. Equipped with a mount for attaching additional devices.]]
 
+ATT.HasReceiver = true 
+
+ATT.EFTErgoAdd = 3
+ATT.CustomPros = { Ergonomics = "+3" }
+ATT.RecoilMult = 0.98
+ATT.VisualRecoilMult = 0.98
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

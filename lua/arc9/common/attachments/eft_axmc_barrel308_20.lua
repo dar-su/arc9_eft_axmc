@@ -1,7 +1,17 @@
 ATT.PrintName = "AI AXMC 7.62x51 20 inch barrel"
 ATT.CompactName = ".308 20\""
 ATT.Icon = Material("entities/eft_axmc_attachments/barrel762_20.png", "mips smooth")
-ATT.Description = [[A 20 inch (508mm) barrel for the AI AXMC chambered in 7.62x51 (.308) ammo.]]
+ATT.Description = [[A 20 inch (508mm) barrel for the AI AXMC chambered in 7.62x51 (.308) ammo.
+
+This attachment was found in EFT files, it's does not exist in actual game yet.]]
+
+ATT.HasBarrel = true 
+
+ATT.EFTErgoAdd = -11
+ATT.CustomCons = { Ergonomics = "-11" }
+ATT.RecoilMult = 0.96
+ATT.VisualRecoilMult = 0.96
+ATT.PhysBulletMuzzleVelocityMult = 1.104
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"

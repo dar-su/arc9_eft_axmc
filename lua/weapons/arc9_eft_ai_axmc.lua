@@ -24,7 +24,7 @@ SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_ai_axmc.mdl"
 SWEP.ViewModelFOVBase = 62
 SWEP.MirrorVMWM = true
-SWEP.DefaultBodygroups = "0000000000001"
+SWEP.DefaultBodygroups = "0000000000000"
 
 
 ------------------------- [[[           STATS            ]]] -------------------------
@@ -46,46 +46,49 @@ SWEP.Spread = 0.0001
 
 --          Recoil
 
-SWEP.Recoil = 0.15
-SWEP.RecoilSights = 0.15
 
-SWEP.RecoilMultHipFire = 1.1
+-- General recoil multiplier
+SWEP.Recoil = 4.25 * 1.27 * 1.01 * 1.02 * 1.01 * 1.02 * 1.05 * 1.11 -- default atts
+
+-- SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilMultCrouch = 0.75
-SWEP.RecoilAutoControlMultHipFire = 0.5
+-- SWEP.RecoilAutoControlMultHipFire = 0.5
 
-SWEP.RecoilUp = 1
-SWEP.RecoilSide = 0.7
+SWEP.RecoilUp = 2
+SWEP.RecoilSide = 5
 SWEP.RecoilRandomUp = 0.9
-SWEP.RecoilRandomSide = 0.8
+SWEP.RecoilRandomSide = 1
 
 SWEP.ViewRecoil = true
-SWEP.ViewRecoilUpMult = 100
-SWEP.ViewRecoilSideMult = 20
+SWEP.ViewRecoilUpMult = 11
+-- SWEP.ViewRecoilUpMultMultHipFire = 2
+SWEP.ViewRecoilSideMult = -4
+-- SWEP.ViewRecoilSideMultMultHipFire = -2
 
-SWEP.RecoilDissipationRate = 11
-SWEP.RecoilAutoControl = 1.1
+SWEP.RecoilDissipationRate = 8
+SWEP.RecoilAutoControl = 5
 SWEP.RecoilResetTime = 0.05
 
 SWEP.UseVisualRecoil = true 
-SWEP.VisualRecoil = 1
-SWEP.VisualRecoilSights = 0.5
-SWEP.VisualRecoilMultHipFire = 0.6
-SWEP.VisualRecoilMultSights = 0.3
+SWEP.VisualRecoil = 0.3 * 1.27 * 1.01 * 1.02 * 1.01 * 1.02 * 1.05 * 1.11 -- default atts
+SWEP.VisualRecoilMultSights = 1
+SWEP.VisualRecoilMultHipFire = 1
+SWEP.VisualRecoilMultCrouch = 0.5
 
-SWEP.VisualRecoilCenter = Vector(2, 2, 2)
-SWEP.VisualRecoilUp = 20 -- Vertical tilt
-SWEP.VisualRecoilSide = 0.5 -- Horizontal tilt
-SWEP.VisualRecoilRoll = 2 -- Roll tilt
+SWEP.VisualRecoilCenter = Vector(2, 6, 2)
+SWEP.VisualRecoilUp = 60 -- Vertical tilt
+SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt
+SWEP.VisualRecoilRoll = 5 -- Roll tilt
 
-SWEP.VisualRecoilPunch = 15 -- How far back visual recoil moves the gun
-SWEP.VisualRecoilPunchMultSights = 1
-SWEP.VisualRecoilPositionBump = 2
+SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilPunchMultSights = 0.5
+SWEP.VisualRecoilPositionBump = 15
 
-SWEP.VisualRecoilDampingConst = 122
-SWEP.VisualRecoilSpringMagnitude = 5.1
-
-SWEP.RecoilKick = 0.05
-SWEP.RecoilKickDamping = 10
+SWEP.VisualRecoilSpringPunchDamping = 20
+SWEP.VisualRecoilDampingConst = 300
+SWEP.VisualRecoilSpringMagnitude = 0.5
+SWEP.VisualRecoilPositionBumpUp = 0.01
+SWEP.VisualRecoilPositionBumpUpHipFire = 0.001
 
 
 --          Heating
@@ -103,7 +106,7 @@ SWEP.MalfunctionMeanShotsToFail = 50
 --          Firemodes
 
 SWEP.RPM = 450
-SWEP.Firemodes = { { Mode = 1, PrintName = "Bolt-action" }, { Mode = 1, PrintName = "Manual reload", ShotgunReload = true },  }
+SWEP.Firemodes = { { Mode = 1, PrintName = "Bolt-action" }, { Mode = 1, PrintName = "Manual reload", ShotgunReload = true, ShouldDropMagEmpty = false },  }
 
 SWEP.ManualAction = true
 SWEP.ManualActionNoLastCycle = true
@@ -146,9 +149,13 @@ SWEP.ClipSize = 1 -- actual chamber (no mag)
 SWEP.SupplyLimit = 4
 SWEP.SecondarySupplyLimit = 4
 SWEP.ReloadInSights = true
-SWEP.DropMagazineSounds = { "weapons/arc9_ud/common/rifle_magdrop_1.ogg", "weapons/arc9_ud/common/rifle_magdrop_2.ogg", "weapons/arc9_ud/common/rifle_magdrop_3.ogg", "weapons/arc9_ud/common/rifle_magdrop_4.ogg" }
-SWEP.DropMagazineAmount = 1
-SWEP.DropMagazineTime = 1.5
+SWEP.DropMagazineSounds = { }
+SWEP.DropMagazineAmount = 0
+SWEP.DropMagazineTime = 1.55
+SWEP.DropMagazineQCA = 4
+SWEP.DropMagazinePos = Vector(0, 0, 0)
+SWEP.DropMagazineAng = Angle(90, 180, 90)
+SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 SWEP.Bash = false
 SWEP.PrimaryBash = false
 SWEP.TracerNum = 1
@@ -300,14 +307,14 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         local rand = swep.EFTInspectnum
         if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
 
-        if rand == 1 and nomag then rand = 2 swep.EFTInspectnum = swep.EFTInspectnum + 1 end
+        if rand == 2 and nomag then rand = 0 swep.EFTInspectnum = 0 end
 
         ending = rand
                 
         if empty then ending = ending .. "_empty" end
 
 
-        if ending == 1 and ARC9EFTBASE and SERVER then
+        if ending == 2 and ARC9EFTBASE and SERVER then
             net.Start("arc9eftmagcheck")
             net.WriteBool(false) -- accurate or not based on mag type
             net.WriteUInt(math.min(swep:Clip1(), swep:GetMaxClip1()), 9)
@@ -348,6 +355,14 @@ end
 --     return true
 -- end
 
+SWEP.ReloadHideBoneTables = {
+    [1] = {
+        "mod_magazine",
+        "patron_in_mag0",
+        "patron_in_mag1",
+        "patron_in_mag2"
+    },
+}
 
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
 
@@ -431,6 +446,9 @@ SWEP.Animations = {
             { s = randspin, t = 3.28 },   
             { s = path .. "aiax_bolt_in.wav", t = 3.68 },
             { s = randspin, t = 4.09 },   
+            {hide = 0, t = 0},
+            {hide = 1, t = 1.55},
+            {hide = 0, t = 2.2}
         },
         EjectAt = 0.42
     },
@@ -494,39 +512,39 @@ SWEP.Animations = {
 
 
 
-    ["inspect0"] = {
+    ["inspect1"] = {
         Source = "inspect0",
         MinProgress = 0.85,
         FireASAP = true,
         EventTable = rst_look
     },    
-    ["inspect0_empty"] = {
+    ["inspect1_empty"] = {
         Source = "inspect0_empty",
         MinProgress = 0.85,
         FireASAP = true,
         EventTable = rst_look
     },
 
-    ["inspect1"] = {
+    ["inspect2"] = {
         Source = "inspect1",
         MinProgress = 0.85,
         FireASAP = true,
         EventTable = rst_magcheck
     },
-    ["inspect1_empty"] = {
+    ["inspect2_empty"] = {
         Source = "inspect1_empty",
         MinProgress = 0.85,
         FireASAP = true,
         EventTable = rst_magcheck
     },
 
-    ["inspect2"] = {
+    ["inspect0"] = {
         Source = "inspect2",
         MinProgress = 0.85,
         FireASAP = true,
         EventTable = rst_chamber
     },
-    ["inspect2_empty"] = {
+    ["inspect0_empty"] = {
         Source = "inspect2_empty",
         MinProgress = 0.85,
         FireASAP = true,
@@ -637,6 +655,25 @@ SWEP.Animations = {
 
 ------------------------- [[[           Attachments            ]]] -------------------------
 
+SWEP.missingpartsnotifsent = 0
+
+function SWEP:HookP_BlockFire()
+    if  !self:GetValue("HasGrip") or 
+        !self:GetValue("HasBolt") or
+        !self:GetValue("HasReceiver") or
+        !self:GetValue("HasBarrel") or
+        !self:GetValue("HasChassis") or
+        !self:GetValue("HasAmmoooooooo") then
+            
+            if self.missingpartsnotifsent < CurTime() then
+                self.missingpartsnotifsent = CurTime() + 3
+                net.Start("arc9eftmissingparts")
+                net.Send(self:GetOwner())
+            end
+            return true 
+    end
+end
+
 SWEP.AttachmentElements = {
     ["eft_axmc_chassis"] = { Bodygroups = { {1, 1} } },
     ["eft_axmc_grip"] = { Bodygroups = { {5, 1} } },
@@ -655,6 +692,10 @@ SWEP.AttachmentElements = {
     ["eft_axmc_barrel308_26"] = { Bodygroups = { {6, 4} } },
     ["eft_axmc_barrel308_24"] = { Bodygroups = { {6, 3} } },
     ["eft_axmc_barrel308_20"] = { Bodygroups = { {6, 2} } },
+    ["eft_axmc_black"] = { Skin = 1 },
+
+    ["338"] = { Bodygroups = { {12, 1} } },
+    ["76251"] = { Bodygroups = { {12, 2} } },
 }
 
 
@@ -733,7 +774,15 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, -0.5, -1),
         RequireElements = {"eft_axmc_bolt308", "eft_axmc_magwell"},
         -- Installed = "eft_axmc_mag308"
-    },    
+    },
+    {
+        PrintName = "Custom slot",
+        Category = {"eft_custom_slot", "eft_custom_axmc"},
+        Bone = "weapon",
+        Pos = Vector(0, 4, -2),
+        Ang = Angle(0, -90, 0),
+        -- CosmeticOnly = true,
+    },
 
 
     -- {

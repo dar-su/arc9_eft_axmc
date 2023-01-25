@@ -6,6 +6,11 @@ ATT.Description = [[The AX 16 inch handguard for the AXMC sniper rifle manufactu
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = 8
+ATT.CustomPros = { Ergonomics = "+8" }
+ATT.RecoilMult = 0.98
+ATT.VisualRecoilMult = 0.98
+
 ATT.Category = {"eft_axmc_hgg"}
 
 ATT.Attachments = {

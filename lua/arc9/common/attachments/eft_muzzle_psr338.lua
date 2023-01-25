@@ -6,6 +6,12 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/muzzle_all_awc_psr_muzzle_brake.
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+ATT.RecoilMult = 0.86
+ATT.VisualRecoilMult = 0.86
+ATT.SpreadMult = 0.99
+
 ATT.Category = {"eft_muzzle_338"}
 ATT.Attachments = {
     {

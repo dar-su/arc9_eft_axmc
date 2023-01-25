@@ -3,6 +3,11 @@ ATT.CompactName = "AXMC PG"
 ATT.Icon = Material("entities/eft_axmc_attachments/grip.png", "mips smooth")
 ATT.Description = [[A pistol grip for the AXMC sniper rifle, manufactured by Accuracy International.]]
 
+ATT.HasGrip = true 
+
+ATT.EFTErgoAdd = 5
+ATT.CustomPros = { Ergonomics = "+5" }
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
