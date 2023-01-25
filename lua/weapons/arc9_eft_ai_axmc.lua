@@ -795,3 +795,10 @@ SWEP.Attachments = {
     --     Installed = "eft_ammo_12x70_7mm",
     -- },
 }
+
+SWEP.EFTErgo = 21
+if ARC9EFTBASE then
+    SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook
+else
+    print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
+end
