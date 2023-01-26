@@ -10,7 +10,7 @@ ATT.HasBolt = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.MuzzleParticle = "muzzleflash_m24"
-ATT.ShellModel = "models/shells/shell_762nato.mdl"
+ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x51.mdl"
 
 ATT.CycleTimeMult = 0.87
 ATT.RecoilMult = 0.8

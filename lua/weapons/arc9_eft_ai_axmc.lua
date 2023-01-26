@@ -23,7 +23,7 @@ SWEP.StandardPresets = {
     "[.308 Conversion]XQAAAQDgAgAAAAAAAAA9iIIiM7tuo1AtT00OeFDsVy0QjzPJ+n72/CiKtDlryAX9+6/kqhA7Hr1E/2D9Iz6rN8zTUCuQ+5Sp9lQY7qxUfunqrzbaeslGLj1cfug0NTlmGh3gA+wVZQA19whbS40jfVlj6uqIKtm8FZlaaIpJNHmek0HjPG94drKMnm1eLKJZln1zdAss1Q90n0VytUc4mj3lf8lEE2semdym9+SxGjHM01bSaBF/wcnHHwiusLCFbaQpe/jslG+Y7ojSHZTNEFqsqYb7KccG04jc/+gn2C2szNw="
 }
     
-SWEP.Slot = 2
+SWEP.Slot = 3
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_ai_axmc.mdl"
 SWEP.ViewModelFOVBase = 62
@@ -147,7 +147,7 @@ SWEP.SwayMultShooting = 1.2
 
 --          Generic stats
 
-SWEP.Ammo = "ar2"
+SWEP.Ammo = "357"
 SWEP.ChamberSize = 0 -- no mag
 SWEP.ClipSize = 1 -- actual chamber (no mag)
 SWEP.SupplyLimit = 4
@@ -226,7 +226,7 @@ SWEP.CamQCA_Mult_ADS = 0.05
 SWEP.MuzzleParticle = "muzzleflash_m82"
 
 SWEP.CaseEffectQCA = 2
-SWEP.ShellModel = "models/shells/shell_338mag.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/86x70.mdl"
 SWEP.ShellScale = 1.5
 SWEP.ShellVelocity = 1
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
@@ -701,8 +701,13 @@ SWEP.AttachmentElements = {
     ["eft_axmc_barrel308_20"] = { Bodygroups = { {6, 2} } },
     ["eft_axmc_black"] = { Skin = 1 },
 
-    ["338"] = { Bodygroups = { {12, 1} } },
-    ["76251"] = { Bodygroups = { {12, 2} } },
+    -- ["338"] = { Bodygroups = { {12, 1} } },
+    ["eft_ammo_338_upz"] = { Bodygroups = { {12, 1} } },
+    ["eft_ammo_338_fmj"] = { Bodygroups = { {12, 2} } },
+    ["eft_ammo_338_ap"] = { Bodygroups = { {12, 3} } },
+    ["eft_ammo_338_tacx"] = { Bodygroups = { {12, 4} } },
+
+    ["76251"] = { Bodygroups = { {12, 5} } },
 }
 
 

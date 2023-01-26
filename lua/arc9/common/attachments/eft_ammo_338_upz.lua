@@ -21,7 +21,7 @@ ATT.PenetrationDelta = 70/100
 ATT.ArmorPiercing =    70/100
 ATT.RicochetChance =   40/100
 
-ATT.Spread = 1.05
+ATT.SpreadMult = 1.05
 
 
 ATT.DamageLookupTable = {
