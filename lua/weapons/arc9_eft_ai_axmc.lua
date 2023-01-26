@@ -116,7 +116,7 @@ SWEP.ManualAction = true
 SWEP.ManualActionNoLastCycle = true
 SWEP.ManualActionEjectAnyway = false
 SWEP.NoShellEject = true
-SWEP.EjectDelay = 0.6
+SWEP.EjectDelay = 0.5
 
 SWEP.ShotgunReload = false 
 
