@@ -105,7 +105,7 @@ SWEP.HeatLockout = false
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionCycle = true 
-SWEP.MalfunctionMeanShotsToFail = 50
+SWEP.MalfunctionMeanShotsToFail = 100
 
 --          Firemodes
 
@@ -162,7 +162,7 @@ SWEP.DropMagazineAng = Angle(90, 180, 90)
 SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 SWEP.Bash = false
 SWEP.PrimaryBash = false
-SWEP.TracerNum = 1
+SWEP.TracerNum = 0
 SWEP.TracerColor = Color(255, 225, 200)
 
 
@@ -476,6 +476,7 @@ SWEP.Animations = {
             { s = path .. "aiax_bolt_in.wav", t = 2.23 },
             { s = randspin, t = 2.6 },   
         },
+        EjectAt = 0.72
     },    
     
 
