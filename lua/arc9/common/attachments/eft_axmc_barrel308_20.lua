@@ -13,6 +13,8 @@ ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 ATT.PhysBulletMuzzleVelocityMult = 1.104
 
+ATT.MuzzleEffectQCA = 5
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

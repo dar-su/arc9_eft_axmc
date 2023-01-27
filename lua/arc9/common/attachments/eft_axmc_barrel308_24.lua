@@ -12,6 +12,7 @@ ATT.CustomCons = { Ergonomics = "-13" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.PhysBulletMuzzleVelocityMult = 1.11
+ATT.MuzzleEffectQCA = 6
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
