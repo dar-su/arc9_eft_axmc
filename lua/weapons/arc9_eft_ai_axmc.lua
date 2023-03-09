@@ -54,15 +54,11 @@ SWEP.Spread = 0.0001
 -- General recoil multiplier
 SWEP.Recoil = 3.5 * 1.27 * 1.01 * 1.02 * 1.01 * 1.02 * 1.05 * 1.11 -- default atts
 
--- SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilMultCrouch = 0.75
--- SWEP.RecoilAutoControlMultHipFire = 0.5
-
 SWEP.RecoilUp = 1.1
 SWEP.RecoilSide = 0.1
 SWEP.RecoilRandomUp = 0.9
 SWEP.RecoilRandomSide = 0.1
-
 
 SWEP.RecoilDissipationRate = 8
 SWEP.RecoilAutoControl = 5
