@@ -71,7 +71,7 @@ SWEP.VisualRecoilMultHipFire = 1
 SWEP.VisualRecoilMultCrouch = 0.5
 
 SWEP.VisualRecoilCenter = Vector(2, 11, 2)
-SWEP.VisualRecoilUp = 111 -- Vertical tilt
+SWEP.VisualRecoilUp = 80 -- Vertical tilt
 SWEP.VisualRecoilSide = 2 -- Horizontal tilt
 SWEP.VisualRecoilRoll = 25 -- Roll tilt
 
@@ -79,9 +79,9 @@ SWEP.VisualRecoilPunch = 9 -- How far back visual recoil moves the gun
 SWEP.VisualRecoilPunchMultSights = 0.5 -- How far back visual recoil moves the gun
 
 
-SWEP.VisualRecoilSpringPunchDamping = 7
-SWEP.VisualRecoilDampingConst = 35
-SWEP.VisualRecoilSpringMagnitude = 12
+SWEP.VisualRecoilSpringPunchDamping = 7 / 2.67
+SWEP.VisualRecoilDampingConst = 35 * 1.67
+SWEP.VisualRecoilSpringMagnitude = 12 / 1.67
 SWEP.VisualRecoilPositionBumpUp = 0.04
 SWEP.VisualRecoilPositionBumpUpHipFire = 0.001
 
