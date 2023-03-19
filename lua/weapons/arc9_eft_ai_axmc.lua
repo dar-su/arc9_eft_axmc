@@ -43,9 +43,10 @@ SWEP.PhysBulletMuzzleVelocity = 21000
 
 
 --          Spread
-SWEP.SpreadMultHipFire = 5
-SWEP.Spread = 0.0001
--- SWEP.SpreadAddRecoil = 0.005
+SWEP.Spread = 0.378 * ARC9.MOAToAcc
+SWEP.SpreadAddHipFire = 0.02
+SWEP.SpreadMultMove = 1.5
+SWEP.SpreadAddMove = 0.015
 
 
 --          Recoil
