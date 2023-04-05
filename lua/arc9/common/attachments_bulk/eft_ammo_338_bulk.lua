@@ -1,5 +1,7 @@
 local ATT = {}
 
+local dmgrange = (GetConVar("arc9_eft_mindmgrange"):GetInt() or 1000)/1000
+local mult338 = GetConVar("arc9_eft_mult_338"):GetFloat() or 0.5
 
 ///////////////////////////////////////      eft_ammo_338_ap
 
@@ -18,11 +20,11 @@ ATT.ActivateElements = {"338"}
 
 ATT.EFTRoundName = ".338 Lapua Magnum AP"
 
-ATT.DamageMax = 115/1.5
-ATT.DamageMin = 80/1.5
+ATT.DamageMax = 115 * mult338
+ATT.DamageMin = 80 * mult338
 ATT.PhysBulletMuzzleVelocity = 849 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      79 *2.54/100/0.0254
 ATT.PenetrationDelta = 89/100
@@ -34,38 +36,38 @@ ATT.RecoilMult = 1.1
 ATT.MalfunctionMeanShotsToFailMult = 0.6
 
 ATT.DamageLookupTable = {
-    {   10/0.0254, 
-    115/1.5     },
+    {   10/0.0254 * dmgrange,
+    115 * mult338     },
 
-    {   100 /0.0254, 
-    110.5/1.5     },
+    {   100 /0.0254 * dmgrange,
+    110.5 * mult338     },
 
-    {   200 /0.0254, 
-    106.6/1.5     },
+    {   200 /0.0254 * dmgrange,
+    106.6 * mult338     },
 
-    {   300 /0.0254, 
-    102.6/1.5     },
+    {   300 /0.0254 * dmgrange,
+    102.6 * mult338     },
 
-    {   400 /0.0254, 
-    98.6/1.5     },
+    {   400 /0.0254 * dmgrange,
+    98.6 * mult338     },
 
-    {   500 /0.0254, 
-    94.5/1.5     },
+    {   500 /0.0254 * dmgrange,
+    94.5 * mult338     },
 
-    {   600 /0.0254, 
-    90/1.5     },
+    {   600 /0.0254 * dmgrange,
+    90 * mult338     },
 
-    {   700 /0.0254, 
-    86.23/1.5     },
+    {   700 /0.0254 * dmgrange,
+    86.23 * mult338     },
 
-    {   800 /0.0254, 
-    83.5/1.5     },
+    {   800 /0.0254 * dmgrange,
+    83.5 * mult338     },
 
-    {   900 /0.0254, 
-    81.5/1.5     },
+    {   900 /0.0254 * dmgrange,
+    81.5 * mult338     },
 
-    {   1000 /0.0254, 
-    80/1.5     },
+    {   1000 /0.0254 * dmgrange,
+    80 * mult338     },
 }
 
 -- 100m     200m    300m    400m    500m    600m    700m    800m    900m    1000m
@@ -94,11 +96,11 @@ ATT.ActivateElements = {"338"}
 
 ATT.EFTRoundName = ".338 Lapua Magnum FMJ"
 
-ATT.DamageMax = 122/1.5
-ATT.DamageMin = 85/1.5
+ATT.DamageMax = 122 * mult338
+ATT.DamageMin = 85 * mult338
 ATT.PhysBulletMuzzleVelocity = 900 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      47 *2.54/100/0.0254
 ATT.PenetrationDelta = 83/100
@@ -110,38 +112,38 @@ ATT.MalfunctionMeanShotsToFailMult = 0.92
 
 
 ATT.DamageLookupTable = {
-    {   10/0.0254, 
-    122/1.5     },
+    {   10/0.0254 * dmgrange,
+    122 * mult338     },
 
-    {   100 /0.0254, 
-    117.5/1.5     },
+    {   100 /0.0254 * dmgrange,
+    117.5 * mult338     },
 
-    {   200 /0.0254, 
-    113.5/1.5     },
+    {   200 /0.0254 * dmgrange,
+    113.5 * mult338     },
 
-    {   300 /0.0254, 
-    109.3/1.5     },
+    {   300 /0.0254 * dmgrange,
+    109.3 * mult338     },
 
-    {   400 /0.0254, 
-    105.49/1.5     },
+    {   400 /0.0254 * dmgrange,
+    105.49 * mult338     },
 
-    {   500 /0.0254, 
-    101.5/1.5     },
+    {   500 /0.0254 * dmgrange,
+    101.5 * mult338     },
 
-    {   600 /0.0254, 
-    97.2/1.5     },
+    {   600 /0.0254 * dmgrange,
+    97.2 * mult338     },
 
-    {   700 /0.0254, 
-    93/1.5     },
+    {   700 /0.0254 * dmgrange,
+    93 * mult338     },
 
-    {   800 /0.0254, 
-    89.3/1.5     },
+    {   800 /0.0254 * dmgrange,
+    89.3 * mult338     },
 
-    {   900 /0.0254, 
-    86.6/1.5     },
+    {   900 /0.0254 * dmgrange,
+    86.6 * mult338     },
 
-    {   1000 /0.0254, 
-    85/1.5     },
+    {   1000 /0.0254 * dmgrange,
+    85 * mult338     },
 }
 
 -- 100m     200m    300m    400m    500m    600m    700m    800m    900m    1000m
@@ -170,11 +172,11 @@ ATT.ActivateElements = {"338"}
 
 ATT.EFTRoundName = ".338 Lapua Magnum TAC-X"
 
-ATT.DamageMax = 196/1.5
-ATT.DamageMin = 136.6/1.5
+ATT.DamageMax = 196 * mult338
+ATT.DamageMin = 136.6 * mult338
 ATT.PhysBulletMuzzleVelocity = 880 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      18 *2.54/100/0.0254
 ATT.PenetrationDelta = 55/100
@@ -188,38 +190,38 @@ ATT.MalfunctionMeanShotsToFailMult = 0.96
 
 
 ATT.DamageLookupTable = {
-    {   10/0.0254, 
-    196/1.5     },
+    {   10/0.0254 * dmgrange,
+    196 * mult338     },
 
-    {   100 /0.0254, 
-    188.8/1.5     },
+    {   100 /0.0254 * dmgrange,
+    188.8 * mult338     },
 
-    {   200 /0.0254, 
-    182/1.5     },
+    {   200 /0.0254 * dmgrange,
+    182 * mult338     },
 
-    {   300 /0.0254, 
-    175.13/1.5     },
+    {   300 /0.0254 * dmgrange,
+    175.13 * mult338     },
 
-    {   400 /0.0254, 
-    169/1.5     },
+    {   400 /0.0254 * dmgrange,
+    169 * mult338     },
 
-    {   500 /0.0254, 
-    162.2/1.5     },
+    {   500 /0.0254 * dmgrange,
+    162.2 * mult338     },
 
-    {   600 /0.0254, 
-    155/1.5     },
+    {   600 /0.0254 * dmgrange,
+    155 * mult338     },
 
-    {   700 /0.0254, 
-    148/1.5     },
+    {   700 /0.0254 * dmgrange,
+    148 * mult338     },
 
-    {   800 /0.0254, 
-    142.6/1.5     },
+    {   800 /0.0254 * dmgrange,
+    142.6 * mult338     },
 
-    {   900 /0.0254, 
-    139/1.5     },
+    {   900 /0.0254 * dmgrange,
+    139 * mult338     },
 
-    {   1000 /0.0254, 
-    136.3/1.5     },
+    {   1000 /0.0254 * dmgrange,
+    136.3 * mult338     },
 }
 
 -- 100m     200m    300m    400m    500m    600m    700m    800m    900m    1000m
@@ -248,11 +250,11 @@ ATT.ActivateElements = {"338"}
 
 ATT.EFTRoundName = ".338 Lapua Magnum UCW"
 
-ATT.DamageMax = 142/1.5
-ATT.DamageMin = 99/1.5
+ATT.DamageMax = 142 * mult338
+ATT.DamageMin = 99 * mult338
 ATT.PhysBulletMuzzleVelocity = 849 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      32 *2.54/100/0.0254
 ATT.PenetrationDelta = 70/100
@@ -263,38 +265,38 @@ ATT.SpreadMult = 1.05
 
 
 ATT.DamageLookupTable = {
-    {   10/0.0254, 
-    142/1.5     },
+    {   10/0.0254 * dmgrange,
+    142 * mult338     },
 
-    {   100 /0.0254, 
-    136.5/1.5     },
+    {   100 /0.0254 * dmgrange,
+    136.5 * mult338     },
 
-    {   200 /0.0254, 
-    131.6/1.5     },
+    {   200 /0.0254 * dmgrange,
+    131.6 * mult338     },
 
-    {   300 /0.0254, 
-    127/1.5     },
+    {   300 /0.0254 * dmgrange,
+    127 * mult338     },
 
-    {   400 /0.0254, 
-    122/1.5     },
+    {   400 /0.0254 * dmgrange,
+    122 * mult338     },
 
-    {   500 /0.0254, 
-    117/1.5     },
+    {   500 /0.0254 * dmgrange,
+    117 * mult338     },
 
-    {   600 /0.0254, 
-    111.4/1.5     },
+    {   600 /0.0254 * dmgrange,
+    111.4 * mult338     },
 
-    {   700 /0.0254, 
-    106.6/1.5     },
+    {   700 /0.0254 * dmgrange,
+    106.6 * mult338     },
 
-    {   800 /0.0254, 
-    103.2/1.5     },
+    {   800 /0.0254 * dmgrange,
+    103.2 * mult338     },
 
-    {   900 /0.0254, 
-    101/1.5     },
+    {   900 /0.0254 * dmgrange,
+    101 * mult338     },
 
-    {   1000 /0.0254, 
-    99.1/1.5     },
+    {   1000 /0.0254 * dmgrange,
+    99.1 * mult338     },
 }
 
 -- 100m     200m    300m    400m    500m    600m    700m    800m    900m    1000m
