@@ -3,18 +3,23 @@ AddCSLuaFile()
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = "Sniper/Marksman Rifles"
-SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
+SWEP.Credits = { 
+    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
+    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+}
 
 SWEP.PrintName = "AI AXMC"
 
-SWEP.Class = "Bolt-action sniper rifle"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_boltsnip")
 SWEP.Trivia = {
-    Manufacturer1 = "Accuracy International",
-    Calibre2 = "8.6x70mm",
-    Action3 = "Bolt",
-    Country4 = "United Kingdom",
-    Year5 = "2014"
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Accuracy International",
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "8.6x70mm",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_bolt"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = "United Kingdom",
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2014"
 }
 
 SWEP.Description = [[The AXMC is the latest in a long and distinguished line of combat proven sniper rifles designed and manufactured by the British company Accuracy International. Chambered in .338 Lapua Magnum, but can be quickly converted to .300 Winchester Magnum and .308 Winchester by changing the barrel, bolt, and magazine/insert.]]
