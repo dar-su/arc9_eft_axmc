@@ -709,6 +709,17 @@ function SWEP:HookP_BlockFire()
     end
 end
 
+function SWEP:Hook_RedPrintName()
+    if  !self:GetValue("HasGrip") or 
+        !self:GetValue("HasBolt") or
+        !self:GetValue("HasReceiver") or
+        !self:GetValue("HasBarrel") or
+        !self:GetValue("HasChassis") or
+        !self:GetValue("HasAmmoooooooo") then
+            return true 
+    end
+end
+
 SWEP.AttachmentElements = {
     ["eft_axmc_chassis"] = { Bodygroups = { {1, 1} } },
     ["eft_axmc_grip"] = { Bodygroups = { {5, 1} } },
