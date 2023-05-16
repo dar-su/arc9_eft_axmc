@@ -167,7 +167,7 @@ SWEP.HoldBreathTime = 40
 SWEP.RestoreBreathTime = 30
 SWEP.BreathInSound = false 
 SWEP.BreathOutSound = false
-SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.wav"
+SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.ogg"
 
 
 --          Generic stats
@@ -287,23 +287,23 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 local path = "weapons/darsu_eft/axmc/"
 
-SWEP.ShootSound = path .. "aiax_outdoor_close.wav"
-SWEP.ShootSoundIndoor = path .. "aiax_indoor_close.wav"
-SWEP.DistantShootSound = path .. "aiax_outdoor_distant.wav"
-SWEP.DistantShootSoundIndoor = path .. "aiax_indoor_distant.wav"
+SWEP.ShootSound = path .. "aiax_outdoor_close.ogg"
+SWEP.ShootSoundIndoor = path .. "aiax_indoor_close.ogg"
+SWEP.DistantShootSound = path .. "aiax_outdoor_distant.ogg"
+SWEP.DistantShootSoundIndoor = path .. "aiax_indoor_distant.ogg"
 
-SWEP.ShootSoundSilenced = path .. "aiax_outdoor_silenced_close.wav"
-SWEP.ShootSoundSilencedIndoor = path .. "aiax_indoor_silenced_close.wav"
-SWEP.DistantShootSoundSilenced = path .. "aiax_outdoor_silenced_distant.wav"
-SWEP.DistantShootSoundSilencedIndoor = path .. "aiax_indoor_silenced_distant.wav"
+SWEP.ShootSoundSilenced = path .. "aiax_outdoor_silenced_close.ogg"
+SWEP.ShootSoundSilencedIndoor = path .. "aiax_indoor_silenced_close.ogg"
+SWEP.DistantShootSoundSilenced = path .. "aiax_outdoor_silenced_distant.ogg"
+SWEP.DistantShootSoundSilencedIndoor = path .. "aiax_indoor_silenced_distant.ogg"
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables
 SWEP.DryFireSound = "" -- we will have own in sound tables
 
 
-SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.wav"
-SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
+SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.ogg"
+SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.ogg"
 ------------------------- [[[           Hooks & functions            ]]] -------------------------
 
 -- Anti integrated zeroing
@@ -398,20 +398,20 @@ SWEP.ReloadHideBoneTables = {
     },
 }
 
-local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_shared/weapon_generic_rifle_spin2.ogg","arc9_eft_shared/weapon_generic_rifle_spin3.ogg","arc9_eft_shared/weapon_generic_rifle_spin4.ogg","arc9_eft_shared/weapon_generic_rifle_spin5.ogg","arc9_eft_shared/weapon_generic_rifle_spin6.ogg","arc9_eft_shared/weapon_generic_rifle_spin7.ogg","arc9_eft_shared/weapon_generic_rifle_spin8.ogg","arc9_eft_shared/weapon_generic_rifle_spin9.ogg","arc9_eft_shared/weapon_generic_rifle_spin10.ogg"}
 
 local rst_magcheck = {
     { s = randspin, t = 0.2 },
-    { s = path .. "aiax_magout.wav", t = 0.73 },
-    { s = path .. "aiax_magin_rattle.wav", t = 2.02 },
-    { s = path .. "aiax_magin.wav", t = 2.25 },
+    { s = path .. "aiax_magout.ogg", t = 0.73 },
+    { s = path .. "aiax_magin_rattle.ogg", t = 2.02 },
+    { s = path .. "aiax_magin.ogg", t = 2.25 },
     { s = randspin, t = 2.76 },
 }
 
 local rst_chamber = {
     { s = randspin, t = 0.22 },
-    { s = path .. "aiax_bolt_out_check.wav", t = 0.55 },
-    { s = path .. "aiax_bolt_in_check.wav", t = 1.47 },
+    { s = path .. "aiax_bolt_out_check.ogg", t = 0.55 },
+    { s = path .. "aiax_bolt_in_check.ogg", t = 1.47 },
     { s = randspin, t = 2.04 },
 }
 
@@ -427,25 +427,25 @@ SWEP.Animations = {
     ["ready"] = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
-            { s = path .. "aiax_bolt_out.wav", t = 0.72 },
-            { s = path .. "aiax_bolt_in.wav", t = 1.21 },
+            { s = "arc9_eft_shared/weap_in.ogg", t = 0 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.72 },
+            { s = path .. "aiax_bolt_in.ogg", t = 1.21 },
         },
     },
 
-    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 } } },
-    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 } } },
+    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.ogg", t = 0 } } },
+    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.ogg", t = 0 } } },
 
 
-    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "aiax_hammer_release.wav", t = 0 } } },
+    ["fire"] = { Source = "fire", NoIdle = true, EventTable = { { s = path .. "aiax_hammer_release.ogg", t = 0 } } },
     ["fire_dry"] = { Source = "fire_dry" },
 
     ["cycle"] = { 
         Source = {"bolt0", "bolt1", "bolt2"},         
         EventTable = {
             { s = randspin, t = 0.12 },   
-            { s = path .. "aiax_bolt_out.wav", t = 0.26 },
-            { s = path .. "aiax_bolt_in.wav", t = 0.69 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.26 },
+            { s = path .. "aiax_bolt_in.ogg", t = 0.69 },
             { s = randspin, t = 1.25 },   
         },
     },
@@ -457,10 +457,10 @@ SWEP.Animations = {
         MagSwapTime = 1.5,
         EventTable = {
             { s = randspin, t = 0.17 },   
-            { s = path .. "aiax_magout.wav", t = 0.55 },
-            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 1.21 },
-            { s = path .. "aiax_magin_rattle.wav", t = 2.12 },
-            { s = path .. "aiax_magin.wav", t = 2.38 },
+            { s = path .. "aiax_magout.ogg", t = 0.55 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.ogg", t = 1.21 },
+            { s = path .. "aiax_magin_rattle.ogg", t = 2.12 },
+            { s = path .. "aiax_magin.ogg", t = 2.38 },
             { s = randspin, t = 2.79 },   
         },
     },
@@ -471,14 +471,14 @@ SWEP.Animations = {
         MagSwapTime = 1.5,
         EventTable = {
             { s = randspin, t = 0.12 },   
-            { s = path .. "aiax_bolt_out.wav", t = 0.26 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.26 },
             { s = randspin, t = 0.69 },   
-            { s = path .. "aiax_magout_fast.wav", t = 1.39 },
-            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 2.08 },
-            { s = path .. "aiax_magin_rattle.wav", t = 2.62 },
-            { s = path .. "aiax_magin.wav", t = 2.88 },
+            { s = path .. "aiax_magout_fast.ogg", t = 1.39 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.ogg", t = 2.08 },
+            { s = path .. "aiax_magin_rattle.ogg", t = 2.62 },
+            { s = path .. "aiax_magin.ogg", t = 2.88 },
             { s = randspin, t = 3.28 },   
-            { s = path .. "aiax_bolt_in.wav", t = 3.68 },
+            { s = path .. "aiax_bolt_in.ogg", t = 3.68 },
             { s = randspin, t = 4.09 },   
             {hide = 0, t = 0},
             {hide = 1, t = 1.55},
@@ -495,12 +495,12 @@ SWEP.Animations = {
         MagSwapTime = 1.5,
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "aiax_bolt_out.wav", t = 0.36 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.36 },
             { s = randspin, t = 0.91 },   
-            { s = path .. "ammo_singleround_pickup.wav", t = 1.2 },
-            { s = path .. "generic_jam_shell_ remove_heavy2.wav", t = 1.72 },
+            { s = path .. "ammo_singleround_pickup.ogg", t = 1.2 },
+            { s = path .. "generic_jam_shell_ remove_heavy2.ogg", t = 1.72 },
             { s = randspin, t = 1.94 },   
-            { s = path .. "aiax_bolt_in.wav", t = 2.23 },
+            { s = path .. "aiax_bolt_in.ogg", t = 2.23 },
             { s = randspin, t = 2.6 },   
         },
         EjectAt = 0.72
@@ -512,7 +512,7 @@ SWEP.Animations = {
         Source = "sgreload_start_empty",
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "aiax_bolt_out.wav", t = 0.28 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.28 },
             { s = randspin, t = 0.81 },  
         },
     },     
@@ -520,15 +520,15 @@ SWEP.Animations = {
         Source = "sgreload_start",
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "aiax_bolt_out.wav", t = 0.28 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.28 },
             { s = randspin, t = 0.81 },  
         },
     },    
     ["reload_insert"] = {
         Source = "sgreload_insert",
         EventTable = {
-            { s = path .. "ammo_singleround_pickup.wav", t = 0 },
-            { s = path .. "generic_jam_shell_ remove_heavy2.wav", t = 0.6 },
+            { s = path .. "ammo_singleround_pickup.ogg", t = 0 },
+            { s = path .. "generic_jam_shell_ remove_heavy2.ogg", t = 0.6 },
             { s = randspin, t = 1.11 },   
         },
         -- MinProgress = 0
@@ -539,8 +539,8 @@ SWEP.Animations = {
         FireASAP = true,
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "aiax_bolt_out.wav", t = 0.36 },
-            { s = path .. "aiax_bolt_in.wav", t = 0.3 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.36 },
+            { s = path .. "aiax_bolt_in.ogg", t = 0.3 },
             { s = randspin, t = 0.8 },    
         },
     },
@@ -586,31 +586,31 @@ SWEP.Animations = {
         EventTable = rst_chamber
     },
 
-    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
 
 
     ["jam1"] = {
         Source = "jam_shell", -- jam shell
         EventTable = {
             { s = randspin, t = 0.15 },
-            { s = path .. "aiax_bolt_out.wav", t = 0.32 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.32 },
             { s = randspin, t = 0.75 },
-            { s = path .. "aiax_bolt_jam6_in1.wav", t = 0.95 },
+            { s = path .. "aiax_bolt_jam6_in1.ogg", t = 0.95 },
             { s = randspin, t = 1.55 },
             { s = randspin, t = 1.68 },
             { s = randspin, t = 2.44 },
-            { s = path .. "aiax_bolt_jam1.wav", t = 3.2 }, 
-            -- { s = path .. "aiax_bolt_jam2.wav", t = 3.42 }, 
+            { s = path .. "aiax_bolt_jam1.ogg", t = 3.2 }, 
+            -- { s = path .. "aiax_bolt_jam2.ogg", t = 3.42 }, 
             { s = randspin, t = 3.59 },
             { s = randspin, t = 3.92 },
             { s = randspin, t = 4.25 },
             { s = randspin, t = 4.4 },
-            { s = path .. "generic_jam_shell_ remove_heavy1.wav", t = 4.48 }, 
+            { s = path .. "generic_jam_shell_ remove_heavy1.ogg", t = 4.48 }, 
             { s = randspin, t = 4.65 },
-            { s = path .. "aiax_bolt_in.wav", t = 5.05 },
+            { s = path .. "aiax_bolt_in.ogg", t = 5.05 },
             { s = randspin, t = 5.76 },
         },
         EjectAt = 4.7,
@@ -619,20 +619,20 @@ SWEP.Animations = {
         Source = "jam_feed", -- jam feed
         EventTable = {
             { s = randspin, t = 0.15 },
-            { s = path .. "aiax_bolt_out.wav", t = 0.35 },
+            { s = path .. "aiax_bolt_out.ogg", t = 0.35 },
             { s = randspin, t = 0.65 },
-            { s = path .. "aiax_bolt_jam6_in1.wav", t = 0.95 },
+            { s = path .. "aiax_bolt_jam6_in1.ogg", t = 0.95 },
             { s = randspin, t = 1.55 },
             { s = randspin, t = 1.68 },
             { s = randspin, t = 2.44 },
-            { s = path .. "aiax_bolt_jam1.wav", t = 3.26 }, 
-            { s = path .. "aiax_bolt_jam5_out1.wav", t = 3.62 },
+            { s = path .. "aiax_bolt_jam1.ogg", t = 3.26 }, 
+            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 3.62 },
             { s = randspin, t = 3.7 },
             { s = randspin, t = 4.06 },
             { s = randspin, t = 4.53 },
-            { s = path .. "generic_jam_shell_ remove_heavy3.wav", t = 5.45 },
+            { s = path .. "generic_jam_shell_ remove_heavy3.ogg", t = 5.45 },
             { s = randspin, t = 6 },
-            { s = path .. "aiax_bolt_in.wav", t = 6.66 },
+            { s = path .. "aiax_bolt_in.ogg", t = 6.66 },
             { s = randspin, t = 7.27 },
         },
         -- EjectAt = 6.5,
@@ -641,23 +641,23 @@ SWEP.Animations = {
         Source = "jam_hard", -- jam hard
         EventTable = {
             { s = randspin, t = 0.14 },
-            { s = path .. "aiax_bolt_jam3_hit.wav", t = 0.52 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
-            { s = path .. "aiax_bolt_jam4_hit.wav", t = 0.94 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 0.52 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
+            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 0.94 },
             { s = randspin, t = 1.48 },
             { s = randspin, t = 2.35 },
-            { s = path .. "aiax_bolt_jam3_hit.wav", t = 2.99 },
-            { s = path .. "aiax_bolt_jam3_hit.wav", t = 3.32 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 2.99 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 3.32 },
             { s = randspin, t = 3.61 },
             { s = randspin, t = 4.26 },
-            { s = path .. "aiax_bolt_jam3_hit.wav", t = 4.76 },
-            { s = path .. "aiax_bolt_jam4_hit.wav", t = 5.43 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 4.76 },
+            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 5.43 },
             { s = randspin, t = 4.45 },
-            { s = path .. "aiax_bolt_jam5_out1.wav", t = 5.8 },
+            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 5.8 },
             { s = randspin, t = 6.1 },
-            { s = path .. "aiax_bolt_jam5_out2.wav", t = 6.16 },
+            { s = path .. "aiax_bolt_jam5_out2.ogg", t = 6.16 },
             { s = randspin, t = 6.45 },
             { s = randspin, t = 6.61 },
-            { s = path .. "aiax_bolt_in.wav", t = 7.07 },
+            { s = path .. "aiax_bolt_in.ogg", t = 7.07 },
             { s = randspin, t = 7.71 },
         },
         EjectAt = 5.95
@@ -666,17 +666,17 @@ SWEP.Animations = {
         Source = "jam_soft", -- jam soft
         EventTable = {
             { s = randspin, t = 0.14 },
-            { s = path .. "aiax_bolt_jam3_hit.wav", t = 0.52 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
-            { s = path .. "aiax_bolt_jam4_hit.wav", t = 0.94 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 0.52 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
+            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 0.94 },
             { s = randspin, t = 1.48 },
             { s = randspin, t = 2.35 },
-            { s = path .. "aiax_bolt_jam3_hit.wav", t = 2.99 },
-            { s = path .. "aiax_bolt_jam5_out1.wav", t = 3.35 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 2.99 },
+            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 3.35 },
             { s = randspin, t = 3.55 },
-            { s = path .. "aiax_bolt_jam5_out2.wav", t = 3.71 },
+            { s = path .. "aiax_bolt_jam5_out2.ogg", t = 3.71 },
             { s = randspin, t = 3.98 },
             { s = randspin, t = 4.36 },
-            { s = path .. "aiax_bolt_in.wav", t = 4.58 },
+            { s = path .. "aiax_bolt_in.ogg", t = 4.58 },
             { s = randspin, t = 5.27 },
         },
         EjectAt = 3.85
