@@ -137,6 +137,9 @@ ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.NoFlash = true
 ATT.BarrelLengthAdd = 5
 
+ATT.MuzzleDevice = true
+ATT.MuzzleDevice_Priority = 5
+
 ATT.EFTErgoAdd = -30
 ATT.CustomCons = { Ergonomics = "-30" }
 ATT.RecoilMult = 0.85
