@@ -138,6 +138,7 @@ SWEP.HeatLockout = false
 SWEP.Malfunction = true 
 SWEP.MalfunctionCycle = true 
 SWEP.MalfunctionMeanShotsToFail = 100
+SWEP.MalfunctionWait = -1 -- oh god why the fuck 0 is 0.5???????
 
 --          Firemodes
 
