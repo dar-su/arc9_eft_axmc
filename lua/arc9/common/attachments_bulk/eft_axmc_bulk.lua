@@ -466,7 +466,7 @@ ATT.Attachments = {
     },
     {
         PrintName = "Mount Bottom",
-        Category = "eft_axmc_hg_rail",
+        Category = {"eft_axmc_hg_rail", "eft_axmc_hg_rail_bipod"},
         Pos = Vector(-7.5, 0, 0.3),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, 0),
@@ -841,3 +841,35 @@ ATT.Attachments = {
 
 ARC9.LoadAttachment(ATT, "eft_axmc_upper")
 
+
+
+///////////////////////////////////////      eft_axmc_railshort
+
+
+ATT = {}
+
+ATT.PrintName = "AI AXMC KeySlot Harris bipod mount"
+ATT.CompactName = "AXMC Harris"
+ATT.Icon = Material("entities/eft_axmc_attachments/shortbipod.png", "mips smooth")
+ATT.Description = [[A KeySlot interface adapter that allows installation of Harris bipods to the AXMC precision rifle. Manufactured by Accuracy International.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/axmc_mount_bipod.mdl"
+-- ATT.ModelAngleOffset = Angle(0, 90, 0)
+
+ATT.Category = {"eft_axmc_hg_rail_bipod"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Bipod",
+        Category = "eft_harris_bipod",
+        Pos = Vector(0, 0, -0.45),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+ARC9.LoadAttachment(ATT, "eft_axmc_railshort")

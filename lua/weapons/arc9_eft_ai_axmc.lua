@@ -301,6 +301,10 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 local path = "weapons/darsu_eft/axmc/"
 
+SWEP.ShootPitchVariation = 0
+SWEP.DistantShootVolume = 0.05
+SWEP.DistantShootVolumeActual = 0.05
+
 SWEP.ShootSound = path .. "aiax_outdoor_close.ogg"
 SWEP.ShootSoundIndoor = path .. "aiax_indoor_close.ogg"
 SWEP.DistantShootSound = path .. "aiax_outdoor_distant.ogg"
