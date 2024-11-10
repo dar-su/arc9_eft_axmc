@@ -850,7 +850,7 @@ ATT = {}
 
 ATT.PrintName = "AI AXMC KeySlot Harris bipod mount"
 ATT.CompactName = "AXMC Harris"
-ATT.Icon = Material("entities/eft_axmc_attachments/shortbipod.png", "mips smooth")
+ATT.Icon = Material("entities/eft_axmc_attachments/axmcbipodmount.png", "mips smooth")
 ATT.Description = [[A KeySlot interface adapter that allows installation of Harris bipods to the AXMC precision rifle. Manufactured by Accuracy International.]]
 
 ATT.SortOrder = 0
