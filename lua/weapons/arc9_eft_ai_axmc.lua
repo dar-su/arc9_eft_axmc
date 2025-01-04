@@ -42,6 +42,7 @@ SWEP.IronSights = {
     Ang = Angle(0, 0.06, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.1,
+    ViewModelFOV = 54
 }
 
 SWEP.ActivePos = Vector(-0.7, -3.1, -.35)
