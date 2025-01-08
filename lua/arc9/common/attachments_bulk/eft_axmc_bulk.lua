@@ -501,6 +501,7 @@ ATT.ClipSize = 10
 ATT.ChamberSize = 1
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_axmc_762x51_10.mdl"
+ATT.ActivateElements = {"mag762"}
 
 
 ARC9.LoadAttachment(ATT, "eft_axmc_mag308")
@@ -511,7 +512,7 @@ ARC9.LoadAttachment(ATT, "eft_axmc_mag308")
 
 ATT = {}
 
-ATT.PrintName = "AI AXMC .338 LM 10-round magazi"
+ATT.PrintName = "AI AXMC .338 LM 10-round magazine"
 ATT.CompactName = "AXMC 338LM"
 ATT.Icon = Material("entities/eft_axmc_attachments/338mag.png", "mips smooth")
 ATT.Description = [[A 10-round AXMC sniper rifle magazine by Accuracy International, for .338 Lapua Magnum cartridges.]]
@@ -528,6 +529,7 @@ ATT.ClipSize = 10
 ATT.ChamberSize = 1
 ATT.DropMagazineAmount = 1
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_axmc_86x70_10.mdl"
+ATT.ActivateElements = {"magdef"}
 
 
 ARC9.LoadAttachment(ATT, "eft_axmc_mag338")

@@ -229,7 +229,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
 
     local ending = ""
 
-    local nomag = !(elements["eft_axmc_mag308"] or elements["eft_axmc_mag338"])
+    local nomag = !(elements["magdef"] or elements["mag762"])
     -- print(nomag)
     -- local nomag = false 
     local empty = swep:Clip1() == 0
