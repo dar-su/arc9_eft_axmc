@@ -845,7 +845,7 @@ ARC9.LoadAttachment(ATT, "eft_axmc_upper")
 
 
 
-///////////////////////////////////////      eft_axmc_railshort
+///////////////////////////////////////      eft_axmc_railbipod
 
 
 ATT = {}
@@ -874,4 +874,4 @@ ATT.Attachments = {
 }
 
 
-ARC9.LoadAttachment(ATT, "eft_axmc_railshort")
+ARC9.LoadAttachment(ATT, "eft_axmc_railbipod")
