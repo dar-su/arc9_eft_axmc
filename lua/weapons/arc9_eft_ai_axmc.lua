@@ -66,6 +66,7 @@ SWEP.ManualActionEjectAnyway = false
 SWEP.NoShellEject = true
 SWEP.EjectDelay = 0.5
 SWEP.ShotgunReload = false 
+SWEP.ShotgunReloadHook = function(swep, meow) if !swep:GetElements()["magdef"] then return false end end -- no shotgunreload without mag
 
 SWEP.Slot = 3
 
