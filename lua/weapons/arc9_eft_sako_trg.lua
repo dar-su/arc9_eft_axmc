@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = "Sako TRG M10"
-SWEP.Description = [[The TRG M10 is a precision bolt-action sniper rifle chambered for the .338 Lapua Magnum cartridge. The TRG M10 is an extremely versatile platform: it easily converts from a proper long-range rifle to a more compact weapon. The rifle is designed to be used by army, police and various special forces of several countries. Manufactured by Sako, which is part of Beretta Defense Technologies holding company. ]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_trgm10_alt")
+SWEP.Description = "eft_weapon_trgm10_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_boltsnip")
+SWEP.Class = "eft_class_weapon_boltsnip"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Sako, Beretta Defense Technologies",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "8.6x70mm",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_bolt"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = "Finland",
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2011"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_sako",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_338lm",
+    ["eft_trivia_act3"] = "eft_trivia_act_bolt",
+    ["eft_trivia_country4"] = "eft_trivia_country_finland",
+    ["eft_trivia_year5"] = "2011"
 }
 
 SWEP.StandardPresets = {

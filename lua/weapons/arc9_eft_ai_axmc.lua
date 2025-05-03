@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = "AI AXMC"
-SWEP.Description = [[The AXMC is the latest in a long and distinguished line of combat proven sniper rifles designed and manufactured by the British company Accuracy International. Chambered in .338 Lapua Magnum, but can be quickly converted to .300 Winchester Magnum and .308 Winchester by changing the barrel, bolt, and magazine/insert.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_axmc_alt")
+SWEP.Description = "eft_weapon_axmc_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_boltsnip")
+SWEP.Class = "eft_class_weapon_boltsnip"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Accuracy International",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "8.6x70mm",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_bolt"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = "United Kingdom",
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2014"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_ai",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_338lm",
+    ["eft_trivia_act3"] = "eft_trivia_act_bolt",
+    ["eft_trivia_country4"] = "eft_trivia_country_brit",
+    ["eft_trivia_year5"] = "2014"
 }
 
 SWEP.StandardPresets = {
