@@ -410,6 +410,8 @@ SWEP.Animations = {
             { s = path .. "aiax_bolt_out.ogg", t = 0.28 },
             { s = randspin, t = 0.81 },  
         },
+        DumpAmmo = 1,
+        EjectAt = 0.4,
     },     
     ["reload_start"] = {
         Source = "sgreload_start",
@@ -418,6 +420,8 @@ SWEP.Animations = {
             { s = path .. "aiax_bolt_out.ogg", t = 0.28 },
             { s = randspin, t = 0.81 },  
         },
+        DumpAmmo = 1,
+        EjectAt = 0.4,
     },    
     ["reload_insert"] = {
         Source = "sgreload_insert",
@@ -426,6 +430,7 @@ SWEP.Animations = {
             { s = path .. "generic_jam_shell_ remove_heavy2.ogg", t = 0.6 },
             { s = randspin, t = 1.11 },   
         },
+        MagSwapTime = 0
         -- MinProgress = 0
     },   
     ["reload_finish"] = {

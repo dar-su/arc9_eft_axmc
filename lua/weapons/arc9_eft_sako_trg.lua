@@ -19,9 +19,9 @@ SWEP.Trivia = {
     [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2011"
 }
 
--- SWEP.StandardPresets = {
---     "[308 Conversion]XQAAAQDgAgAAAAAAAAA9iIIiM7tuo1AtT00OeFDsVy0QjzPJ+n72/CiKtDlryAX9+6/kqhA7Hr1E/2D9Iz6rN8zTUCuQ+5Sp9lQY7qxUfunqrzbaeslGLj1cfug0NTlmGh3gA+wVZQA19whbS40jfVlj6uqIKtm8FZlaaIpJNHmek0HjPG94drKMnm1eLKJZln1zdAss1Q90n0VytUc4mj3lf8lEE2semdym9+SxGjHM01bSaBF/wcnHHwiusLCFbaQpe/jslG+Y7ojSHZTNEFqsqYb7KccG04jc/+gn2C2szNw="
--- }
+SWEP.StandardPresets = {
+    "[PM II 1-8x24]XQAAAQDmAgAAAAAAAAA9iIIiM7tuo1AtT00OeFD83bVibrLIlXuX7q0FNINlDQPnmvrpoJPrx2ddTZPphecHfZ6WEJ3K8CMB7R1J9k8srI6NdjzFHbaiiaMBWibA37qZEu5lwcTj0tpMww2ojz+INoSc1fqfwpqdFk+/74deKL0KapvSayQUBBULxu+xpo/RNpnhT+hiLAY8E8vvEuAK2s+F222Gs2X3aoFZtlNJ2Wg1GW4BVCDq2JC7Gy7f2/xbLt644J++GGRQtWq8sQZLVo7WKD5pq7hDLHYLMNFGuzED/cjbL5SRZKBYOCAxvj4GRicwwq5Uek3AAqCFBijHBPqXkwO30uANIGsRVg=="
+}
 
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_sako_trg.mdl"
@@ -52,10 +52,10 @@ SWEP.CustomizeRotateAnchor = Vector(14.5, -4.28-0.1, -5.23)
 
 ------------------------- |||           Stats            ||| -------------------------
 
-SWEP.Spread = 0.378 * ARC9.MOAToAcc
+SWEP.Spread = 0.46 * ARC9.MOAToAcc
 SWEP.RPM = 450
 
-SWEP.EFTErgo = 21
+SWEP.EFTErgo = 25
 SWEP.BarrelLength = 50
 SWEP.Ammo = "357"
 SWEP.Firemodes = { { Mode = 1, PrintName = "Bolt-action" }, { Mode = 1, PrintName = "Manual reload", ShotgunReload = true, ShouldDropMagEmpty = false },  }
@@ -64,7 +64,7 @@ SWEP.ManualAction = true
 SWEP.ManualActionNoLastCycle = true
 SWEP.ManualActionEjectAnyway = false
 SWEP.NoShellEject = true
-SWEP.EjectDelay = 0.5
+SWEP.EjectDelay = 0.56
 SWEP.ShotgunReload = false 
 SWEP.ShotgunReloadHook = function(swep, meow) if !swep:GetElements()["magdef"] then return false end end -- no shotgunreload without mag
 
@@ -178,19 +178,6 @@ SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/86x70.mdl"
 SWEP.ShellScale = 1.5
 SWEP.ShellSounds = ARC9EFT.ShellsHeavy
 
--- Anti integrated zeroing
-local sposoffset, sangoffset = Vector(0, 0, -0.05), Angle(0, 0.5, 0)
-
-function SWEP:GetSightPositions()
-    local s = self:GetSight()
-
-    if self:GetValue("FoldSights") then
-        return s.Pos, s.Ang
-    else
-        return s.Pos + sposoffset, s.Ang + sangoffset
-    end
-end
-
 ------------------------- |||           Sounds            ||| -------------------------
 
 local path = "weapons/darsu_eft/sako/"
@@ -207,7 +194,7 @@ SWEP.DistantShootSoundSilencedIndoor = path .. "sako_fire_indoor_silenced_distan
 
 ------------------------- |||           Dropped magazines            ||| -------------------------
 
-SWEP.DropMagazineTime = 1.55
+SWEP.DropMagazineTime = 0.9
 SWEP.DropMagazineQCA = 4
 SWEP.DropMagazinePos = Vector(0, 0, 0)
 SWEP.DropMagazineAng = Angle(90, 180, 90)
@@ -296,20 +283,26 @@ SWEP.ReloadHideBoneTables = {
 
 
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_shared/weapon_generic_rifle_spin2.ogg","arc9_eft_shared/weapon_generic_rifle_spin3.ogg","arc9_eft_shared/weapon_generic_rifle_spin4.ogg","arc9_eft_shared/weapon_generic_rifle_spin5.ogg","arc9_eft_shared/weapon_generic_rifle_spin6.ogg","arc9_eft_shared/weapon_generic_rifle_spin7.ogg","arc9_eft_shared/weapon_generic_rifle_spin8.ogg","arc9_eft_shared/weapon_generic_rifle_spin9.ogg","arc9_eft_shared/weapon_generic_rifle_spin10.ogg"}
+local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
+local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
 local rst_magcheck = {
-    { s = randspin, t = 0.2 },
-    { s = path .. "sako_mag_out.ogg", t = 0.73 },
-    { s = path .. "sako_magin_rattle.ogg", t = 2.02 },
-    { s = path .. "sako_mag_in.ogg", t = 2.25 },
-    { s = randspin, t = 2.76 },
+    { s = path .. "aa12_flip_02.ogg", t = 0.05 },
+    { s = path .. "aim_on_riffle_07.ogg", t = 0.2 - 0.1 },
+    { s = path .. "sks_magrelease_button.ogg", t = 1.26 - 0.1 },
+    { s = path .. "sako_mag_out_fast.ogg", t = 1.26 + 0.2 },
+    { s = randspin, t = 1.71 },
+    { s = path .. "sako_magin_rattle.ogg", t = 3.24 - 0.1 },
+    { s = path .. "sako_mag_in.ogg", t = 3.62 - 0.3 },
+    { s = path .. "aim_on_riffle_18.ogg", t = 4.08 - 0.3 },
+    { s = randspin, t = 4.53 },
 }
 
 local rst_chamber = {
-    { s = randspin, t = 0.22 },
-    { s = path .. "sako_bolt_out_check.ogg", t = 0.55 },
-    { s = path .. "sako_bolt_in_check.ogg", t = 1.47 },
-    { s = randspin, t = 2.04 },
+    { s = randspin, t = 0.05 },
+    { s = path .. "sako_bolt_out_check.ogg", t = 0.92 },
+    { s = path .. "sako_bolt_in_check.ogg", t = 1.44 + 0.2 },
+    { s = randspin, t = 2.09 },
 }
 
 local rst_look = {
@@ -325,8 +318,9 @@ SWEP.Animations = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
             { s = "arc9_eft_shared/weap_in.ogg", t = 0 },
-            { s = path .. "sako_bolt_out.ogg", t = 0.72 },
-            { s = path .. "sako_bolt_in.ogg", t = 1.21 },
+            { s = path .. "sako_bolt_out.ogg", t = 0.45 },
+            { s = path .. "sako_bolt_in.ogg", t = 1 },
+            { s = path .. "aa12_flip_02.ogg", t = 1.45 },
         },
     },
 
@@ -340,10 +334,10 @@ SWEP.Animations = {
     ["cycle"] = { 
         Source = {"bolt0", "bolt1", "bolt2"},         
         EventTable = {
-            { s = randspin, t = 0.12 },   
-            { s = path .. "sako_bolt_out.ogg", t = 0.26 },
-            { s = path .. "sako_bolt_in.ogg", t = 0.69 },
-            { s = randspin, t = 1.25 },   
+            { s = randspin, t = 0.05 },   
+            { s = path .. "sako_bolt_out.ogg", t = 0.26-0.1 },
+            { s = path .. "sako_bolt_in.ogg", t = 0.73-0.1 },
+            { s = path .. "aa12_flip_02.ogg", t = 1.1 },
         },
     },
 
@@ -353,12 +347,17 @@ SWEP.Animations = {
         FireASAP = true,
         MagSwapTime = 1.5,
         EventTable = {
-            { s = randspin, t = 0.17 },   
-            { s = path .. "sako_mag_out.ogg", t = 0.55 },
-            { s = "arc9_eft_shared/weap_magin_sbrosnik.ogg", t = 1.21 },
-            { s = path .. "sako_magin_rattle.ogg", t = 2.12 },
-            { s = path .. "sako_mag_in.ogg", t = 2.38 },
-            { s = randspin, t = 2.79 },   
+            { s = path .. "aa12_flip_02.ogg", t = 0 },
+            { s = path .. "aim_on_riffle_07.ogg", t = 0.2 - 0.15 },
+            { s = path .. "sks_magrelease_button.ogg", t = 1.25 - 0.1 },
+            { s = path .. "sako_mag_out.ogg", t = 1.25 + 0.2 },
+            { s = randspin, t = 1.71 },  
+            { s = pouchin, t = 2 },
+            { s = pouchout, t = 2.2 },
+            { s = path .. "sako_magin_rattle.ogg", t = 3.07 - 0.1 },
+            { s = path .. "sako_mag_in.ogg", t = 3.38 - 0.3 },
+            { s = path .. "aim_on_riffle_18.ogg", t = 3.87 - 0.25 },
+            { s = randspin, t = 4.3 },  
         },
     },
     ["reload_empty"] = {
@@ -367,21 +366,24 @@ SWEP.Animations = {
         FireASAP = true,
         MagSwapTime = 1.5,
         EventTable = {
-            { s = randspin, t = 0.12 },   
-            { s = path .. "sako_bolt_out.ogg", t = 0.26 },
-            { s = randspin, t = 0.69 },   
-            { s = path .. "sako_mag_out_fast.ogg", t = 1.39 },
-            { s = "arc9_eft_shared/weap_magin_sbrosnik.ogg", t = 2.08 },
-            { s = path .. "sako_magin_rattle.ogg", t = 2.62 },
-            { s = path .. "sako_mag_in.ogg", t = 2.88 },
-            { s = randspin, t = 3.28 },   
-            { s = path .. "sako_bolt_in.ogg", t = 3.68 },
-            { s = randspin, t = 4.09 },   
+            { s = path .. "aim_on_riffle_07.ogg", t = 0 },
+            { s = path .. "sks_magrelease_button.ogg", t = 0.4 - 0.1 },
+            { s = path .. "sako_mag_out_fast.ogg", t = 0.4 + 0.2 },
+            { s = randspin, t = 0.65 },  
+            { s = pouchout, t = 1.2 },
+            { s = path .. "sako_magin_rattle.ogg", t = 1.9 - 0.1 },
+            { s = path .. "sako_mag_in.ogg", t = 2.19 - 0.3 },
+            { s = path .. "aim_on_riffle_18.ogg", t = 2.66 - 0.25 },
+            { s = randspin, t = 3.15 },
+            { s = path .. "sako_bolt_out.ogg", t = 3.77-0.15 },
+            { s = path .. "sako_bolt_in.ogg", t = 4.23-0.1 },
+            { s = path .. "aa12_flip_02.ogg", t = 4.56 },
+
             {hide = 0, t = 0},
-            {hide = 1, t = 1.55},
-            {hide = 0, t = 2.2}
+            {hide = 1, t = 0.9},
+            {hide = 0, t = 1.2}
         },
-        EjectAt = 0.42
+        EjectAt = 4.04
     },
 
 
@@ -392,15 +394,15 @@ SWEP.Animations = {
         MagSwapTime = 1.5,
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "sako_bolt_out.ogg", t = 0.36 },
-            { s = randspin, t = 0.91 },   
-            { s = path .. "ammo_singleround_pickup.ogg", t = 1.2 },
-            { s = path .. "generic_jam_shell_ remove_heavy2.ogg", t = 1.72 },
-            { s = randspin, t = 1.94 },   
-            { s = path .. "sako_bolt_in.ogg", t = 2.23 },
-            { s = randspin, t = 2.6 },   
+            { s = path .. "sako_bolt_out.ogg", t = 0.19-0.15 },
+            -- { s = randspin, t = 0.91 },   
+            { s = path .. "ammo_singleround_pickup.ogg", t = 0.97 },
+            { s = path .. "generic_jam_shell_ remove_heavy2.ogg", t = 1.38 },
+            { s = randspin, t = 1.2 },   
+            { s = path .. "sako_bolt_in.ogg", t = 2.07-0.1 },
+            { s = randspin, t = 2.3 },   
         },
-        EjectAt = 0.72
+        EjectAt = 0.47
     },    
     
 
@@ -409,17 +411,21 @@ SWEP.Animations = {
         Source = "sgreload_start_empty",
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "sako_bolt_out.ogg", t = 0.28 },
+            { s = path .. "sako_bolt_out.ogg", t = 0.23 },
             { s = randspin, t = 0.81 },  
         },
+        DumpAmmo = 1,
+        EjectAt = 0.5,
     },     
     ["reload_start"] = {
         Source = "sgreload_start",
         EventTable = {
             { s = randspin, t = 0.05 },   
-            { s = path .. "sako_bolt_out.ogg", t = 0.28 },
+            { s = path .. "sako_bolt_out.ogg", t = 0.23 },
             { s = randspin, t = 0.81 },  
         },
+        DumpAmmo = 1,
+        EjectAt = 0.5,
     },    
     ["reload_insert"] = {
         Source = "sgreload_insert",
@@ -427,7 +433,8 @@ SWEP.Animations = {
             { s = path .. "ammo_singleround_pickup.ogg", t = 0 },
             { s = path .. "generic_jam_shell_ remove_heavy2.ogg", t = 0.6 },
             { s = randspin, t = 1.11 },   
-        },
+            },
+            MagSwapTime = 0
         -- MinProgress = 0
     },   
     ["reload_finish"] = {
@@ -435,9 +442,8 @@ SWEP.Animations = {
         MinProgress = 0.95,
         FireASAP = true,
         EventTable = {
-            { s = randspin, t = 0.05 },   
-            { s = path .. "sako_bolt_out.ogg", t = 0.36 },
-            { s = path .. "sako_bolt_in.ogg", t = 0.3 },
+            { s = randspin, t = 0.05 },
+            { s = path .. "sako_bolt_in.ogg", t = 0.2 },
             { s = randspin, t = 0.8 },    
         },
     },
@@ -492,91 +498,93 @@ SWEP.Animations = {
     ["jam1"] = {
         Source = "jam_shell", -- jam shell
         EventTable = {
-            { s = randspin, t = 0.15 },
-            { s = path .. "sako_bolt_out.ogg", t = 0.32 },
-            { s = randspin, t = 0.75 },
-            { s = path .. "aiax_bolt_jam6_in1.ogg", t = 0.95 },
-            { s = randspin, t = 1.55 },
-            { s = randspin, t = 1.68 },
-            { s = randspin, t = 2.44 },
-            { s = path .. "aiax_bolt_jam1.ogg", t = 3.2 }, 
-            -- { s = path .. "aiax_bolt_jam2.ogg", t = 3.42 }, 
-            { s = randspin, t = 3.59 },
-            { s = randspin, t = 3.92 },
-            { s = randspin, t = 4.25 },
-            { s = randspin, t = 4.4 },
-            { s = path .. "generic_jam_shell_ remove_heavy1.ogg", t = 4.48 }, 
-            { s = randspin, t = 4.65 },
-            { s = path .. "sako_bolt_in.ogg", t = 5.05 },
-            { s = randspin, t = 5.76 },
+            { s = randspin, t = 0.05 },   
+            { s = path .. "sako_bolt_out.ogg", t = 0.26-0.1 },
+            { s = path .. "aiax_bolt_jam6_in1.ogg", t = 0.73-0.1 },
+
+            { s = randspin, t = 1.4 },
+            { s = randspin, t = 1.61 },
+            { s = randspin, t = 2.3 },
+            { s = path .. "aiax_bolt_jam1.ogg", t = 3.54 }, 
+            { s = path .. "longweapon_jam_rattle3.ogg", t = 3.98 }, 
+            { s = path .. "longweapon_jam_rattle5.ogg", t = 4.42 }, 
+            { s = path .. "generic_jam_shell_ remove_heavy1.ogg", t = 5.11 }, 
+            { s = randspin, t = 5.9 },
+            { s = path .. "sako_bolt_in.ogg", t = 6.34-0.1 },
+            { s = path .. "aa12_flip_02.ogg", t = 6.9 },
+            -- { s = randspin, t = 5.76 },
+            { s =  ARC9EFT.ShellsHeavy, t = 6.6 },
         },
-        EjectAt = 4.7,
     },
     ["jam2"] = {
         Source = "jam_feed", -- jam feed
         EventTable = {
-            { s = randspin, t = 0.15 },
-            { s = path .. "sako_bolt_out.ogg", t = 0.35 },
-            { s = randspin, t = 0.65 },
-            { s = path .. "aiax_bolt_jam6_in1.ogg", t = 0.95 },
-            { s = randspin, t = 1.55 },
-            { s = randspin, t = 1.68 },
-            { s = randspin, t = 2.44 },
-            { s = path .. "aiax_bolt_jam1.ogg", t = 3.26 }, 
-            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 3.62 },
-            { s = randspin, t = 3.7 },
-            { s = randspin, t = 4.06 },
-            { s = randspin, t = 4.53 },
-            { s = path .. "generic_jam_shell_ remove_heavy3.ogg", t = 5.45 },
-            { s = randspin, t = 6 },
-            { s = path .. "sako_bolt_in.ogg", t = 6.66 },
-            { s = randspin, t = 7.27 },
+            { s = randspin, t = 0.05 },   
+            { s = path .. "sako_bolt_out.ogg", t = 0.26-0.1 },
+            { s = path .. "aiax_bolt_jam6_in1.ogg", t = 0.73-0.1 },
+
+            { s = randspin, t = 1.4 },
+            { s = randspin, t = 1.61 },
+            { s = randspin, t = 2.3 },
+            { s = path .. "aiax_bolt_jam1.ogg", t = 3.28 },
+            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 3.58 },
+            { s = path .. "longweapon_jam_rattle3.ogg", t = 3.97 },
+            { s = path .. "generic_jam_shell_ remove_heavy3.ogg", t = 4 },
+            { s = path .. "longweapon_jam_rattle5.ogg", t = 4.49 },
+            { s = randspin, t = 4.86 },
+            { s = path .. "sako_bolt_in.ogg", t = 5.15-0.1 },
+            { s = path .. "aa12_flip_02.ogg", t = 5.7 },
+            { s =  ARC9EFT.ShellsHeavy, t = 5.3 },
         },
         -- EjectAt = 6.5,
     },
     ["jam3"] = {
         Source = "jam_hard", -- jam hard
         EventTable = {
-            { s = randspin, t = 0.14 },
-            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 0.52 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
-            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 0.94 },
-            { s = randspin, t = 1.48 },
-            { s = randspin, t = 2.35 },
-            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 2.99 },
-            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 3.32 },
-            { s = randspin, t = 3.61 },
-            { s = randspin, t = 4.26 },
-            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 4.76 },
-            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 5.43 },
-            { s = randspin, t = 4.45 },
-            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 5.8 },
-            { s = randspin, t = 6.1 },
-            { s = path .. "aiax_bolt_jam5_out2.ogg", t = 6.16 },
-            { s = randspin, t = 6.45 },
-            { s = randspin, t = 6.61 },
-            { s = path .. "sako_bolt_in.ogg", t = 7.07 },
-            { s = randspin, t = 7.71 },
+            { s = randspin, t = 0.05 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 0.5 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
+            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 0.86 },
+            { s = randspin, t = 1.3 },
+            { s = randspin, t = 1.68 },
+            { s = randspin, t = 2.34 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 3.24 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 3.52 },
+            { s = randspin, t = 3.8 },
+            { s = randspin, t = 4.32 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 4.85 },
+            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 5.45 },
+            -- { s = randspin, t = 4.45 },
+            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 5.82 },
+            -- { s = randspin, t = 6.1 },
+            { s = path .. "aiax_bolt_jam5_out2.ogg", t = 6.18 },
+            { s = path .. "generic_jam_shell_ remove_heavy3.ogg", t = 6.26 },
+            -- { s = randspin, t = 6.45 },
+            -- { s = randspin, t = 6.61 },
+            { s = path .. "sako_bolt_in.ogg", t = 7.03-0.1 },
+            { s = path .. "aa12_flip_02.ogg", t = 7.56 },
         },
-        EjectAt = 5.95
+        EjectAt = 6.26
     },
     ["jam4"] = {
         Source = "jam_soft", -- jam soft
         EventTable = {
-            { s = randspin, t = 0.14 },
-            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 0.52 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
-            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 0.94 },
-            { s = randspin, t = 1.48 },
-            { s = randspin, t = 2.35 },
-            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 2.99 },
-            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 3.35 },
-            { s = randspin, t = 3.55 },
-            { s = path .. "aiax_bolt_jam5_out2.ogg", t = 3.71 },
-            { s = randspin, t = 3.98 },
+            { s = randspin, t = 0.05 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 0.5 }, -- generic_jam_slidelock_hit1   generic_jam_slidelock_hit2
+            { s = path .. "aiax_bolt_jam4_hit.ogg", t = 0.86 },
+            { s = randspin, t = 1.3 },
+            { s = randspin, t = 1.68 },
+            { s = randspin, t = 2.34 },
+            { s = path .. "aiax_bolt_jam3_hit.ogg", t = 3.3 },
+            { s = path .. "aiax_bolt_jam5_out1.ogg", t = 3.66 },
+            -- { s = randspin, t = 3.55 },
+            { s = path .. "aiax_bolt_jam5_out2.ogg", t = 3.98 },
+            { s = path .. "generic_jam_shell_ remove_heavy3.ogg", t = 4.06 },
+            { s = randspin, t = 4.4 },
             { s = randspin, t = 4.36 },
-            { s = path .. "sako_bolt_in.ogg", t = 4.58 },
-            { s = randspin, t = 5.27 },
+            { s = path .. "sako_bolt_in.ogg", t = 4.84-0.1 },
+            { s = path .. "aa12_flip_02.ogg", t = 5.4 },
         },
-        EjectAt = 3.85
+        EjectAt = 4.06
     },
 
 
