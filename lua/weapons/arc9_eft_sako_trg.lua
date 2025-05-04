@@ -58,7 +58,7 @@ SWEP.RPM = 450
 SWEP.EFTErgo = 25
 SWEP.BarrelLength = 50
 SWEP.Ammo = "357"
-SWEP.Firemodes = { { Mode = 1, PrintName = "Bolt-action" }, { Mode = 1, PrintName = "Manual reload", ShotgunReload = true, ShouldDropMagEmpty = false },  }
+SWEP.Firemodes = { { Mode = 1, PrintName = "eft_fmode_bolt" }, { Mode = 1, PrintName = "eft_fmode_manualreload", ShotgunReload = true, ShouldDropMagEmpty = false },  }
 
 SWEP.ManualAction = true
 SWEP.ManualActionNoLastCycle = true
@@ -414,7 +414,7 @@ SWEP.Animations = {
             { s = path .. "sako_bolt_out.ogg", t = 0.23 },
             { s = randspin, t = 0.81 },  
         },
-        DumpAmmo = 1,
+        -- RestoreAmmo = 0,
         EjectAt = 0.5,
     },     
     ["reload_start"] = {
@@ -424,7 +424,7 @@ SWEP.Animations = {
             { s = path .. "sako_bolt_out.ogg", t = 0.23 },
             { s = randspin, t = 0.81 },  
         },
-        DumpAmmo = 1,
+        RestoreAmmo = -1,
         EjectAt = 0.5,
     },    
     ["reload_insert"] = {
